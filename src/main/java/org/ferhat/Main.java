@@ -9,22 +9,15 @@ public class Main {
     public static void main(String[] args) {
 
         int[] binrandom = generateRandomArray(1000);
-        long startTime = System.currentTimeMillis();
-        mergeSort(binrandom);
-        long endTime = System.currentTimeMillis();
-        System.out.println("Merge Sort (random 1000 eleman): " + (endTime - startTime) + " ms");
+        printSortTime(binrandom,"mergeSort", "Random");
+        printSortTime(binrandom,"quickSort", "Random");
+
 
         Arrays.sort(binrandom);
-        long startTime1 = System.currentTimeMillis();
-        mergeSort(binrandom);
-        long endTime1 = System.currentTimeMillis();
-        System.out.println("Merge Sort (Sıralı 1000 eleman): " + (endTime1 - startTime1) + " ms");
+        printSortTime(binrandom,"mergeSort", "Sıralı");
 
         int[] binReverse = reverseSort(binrandom);
-        long startTime2 = System.currentTimeMillis();
-        mergeSort(binReverse);
-        long endTime2 = System.currentTimeMillis();
-        System.out.println("Merge Sort (Tersten 1000 eleman): " + (endTime2 - startTime2) + " ms");
+        printSortTime(binReverse,"mergeSort", "Tersten");
 
 
 
@@ -69,6 +62,25 @@ public class Main {
             reverseArr[j] = arr[i];
         }
         return reverseArr;
+    }
+
+    //Message
+    public static void printSortTime(int[] arr, String sortName, String type) {
+
+        switch (sortName) {
+            case "mergeSort":
+                long startTime = System.currentTimeMillis();
+                mergeSort(arr);
+                long endTime = System.currentTimeMillis();
+                System.out.println("Merge Sort " + type +" "+ arr.length + " eleman: " + (endTime - startTime) + " ms");
+                break;
+            case "quickSort":
+                long startTime1 = System.currentTimeMillis();
+                quickSort(arr, 0, arr.length - 1);
+                long endTime1 = System.currentTimeMillis();
+                System.out.println("Quick Sort " + type +" "+ arr.length + " eleman: " + (endTime1 - startTime1) + " ms");
+                break;
+        }
     }
 
     //Merge Sort
@@ -125,6 +137,35 @@ public class Main {
         }
         return result;
     }
+
+    public static void quickSort(int arr[], int left, int right) {
+        if( left < right ) {
+            int pivotIndex = left + (right-left)/2;
+            int pivotNewIndex = partition(arr, left, right, pivotIndex);
+            quickSort(arr, left, pivotNewIndex - 1);
+            quickSort(arr, pivotNewIndex + 1, right);
+        }
+    }
+
+    public static int partition(int arr[], int left, int right, int pivotIndex) {
+        int pivotValue = arr[pivotIndex];
+        arr[pivotIndex] = arr[right];
+        arr[right] = pivotValue;
+        int storeIndex = left;
+        for(int i=left; i<right; i++) {
+            if( arr[i] < pivotValue ) {
+                int temp = arr[i];
+                arr[i] = arr[storeIndex];
+                arr[storeIndex] = temp;
+                storeIndex++;
+            }
+        }
+        int temp = arr[right];
+        arr[right] = arr[storeIndex];
+        arr[storeIndex] = temp;
+        return storeIndex;
+    }
+
 
 
 

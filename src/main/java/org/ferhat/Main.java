@@ -1,47 +1,79 @@
 package org.ferhat;
 
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("************ Bin Başlangıç ************");
         int[] binrandom = generateRandomArray(1000);
         printSortTime(binrandom,"mergeSort", "Random");
         printSortTime(binrandom,"quickSort", "Random");
-
-
         Arrays.sort(binrandom);
         printSortTime(binrandom,"mergeSort", "Sıralı");
-
+        printSortTime(binrandom,"quickSort", "Sıralı");
         int[] binReverse = reverseSort(binrandom);
         printSortTime(binReverse,"mergeSort", "Tersten");
+        printSortTime(binReverse,"quickSort", "Tersten");
 
-
-
+        System.out.println("************ On Bin Başlangıç ************");
         int[] onbinrandom = generateRandomArray(10000);
+        printSortTime(onbinrandom,"mergeSort","Random");
+        printSortTime(onbinrandom,"quickSort", "Random");
+
         Arrays.sort(onbinrandom);
+        printSortTime(onbinrandom,"mergeSort", "Sıralı");
+        printSortTime(onbinrandom,"quickSort", "Sıralı");
+
         int[] onbinreverse = reverseSort(onbinrandom);
+        printSortTime(onbinreverse,"mergeSort", "Tersten");
+        printSortTime(onbinreverse,"quickSort", "Tersten");
 
-
+        System.out.println("************ Elli Bin Başlangıç ************");
         int[] ellibinrandom = generateRandomArray(50000);
+        printSortTime(ellibinrandom,"mergeSort", "Random");
+        printSortTime(ellibinrandom,"quickSort", "Random");
         Arrays.sort(ellibinrandom);
+        printSortTime(ellibinrandom,"mergeSort", "Sıralı");
+        printSortTime(ellibinrandom,"quickSort", "Sıralı");
         int[] ellibinreverse = reverseSort(ellibinrandom);
+        printSortTime(ellibinreverse,"mergeSort", "Tersten");
+        printSortTime(ellibinreverse,"quickSort", "Tersten");
 
 
+        System.out.println("************ Yüz Bin Başlangıç ************");
         int[] yuzbinrandom = generateRandomArray(100000);
+        printSortTime(yuzbinrandom,"mergeSort", "Random");
+        printSortTime(yuzbinrandom,"quickSort", "Random");
         Arrays.sort(yuzbinrandom);
+        printSortTime(yuzbinrandom,"mergeSort", "Sıralı");
+        printSortTime(yuzbinrandom,"quickSort", "Sıralı");
         int[] yuzbinreverse = reverseSort(yuzbinrandom);
+        printSortTime(yuzbinreverse,"mergeSort", "Tersten");
+        printSortTime(yuzbinreverse,"quickSort", "Tersten");
 
+        System.out.println("************ Bes Yüz Bin Başlangıç ************");
         int[] besyuzbinrandom = generateRandomArray(500000);
+        printSortTime(besyuzbinrandom,"mergeSort", "Random");
+        printSortTime(besyuzbinrandom,"quickSort", "Random");
         Arrays.sort(besyuzbinrandom);
+        printSortTime(besyuzbinrandom,"mergeSort", "Sıralı");
+        printSortTime(besyuzbinrandom,"quickSort", "Sıralı");
         int[] besyuzbinreverse = reverseSort(besyuzbinrandom);
+        printSortTime(besyuzbinreverse,"mergeSort", "Tersten");
+        printSortTime(besyuzbinreverse,"quickSort", "Tersten");
 
+        System.out.println("************ Bir Milyon Başlangıç ************");
         int[] milyonrandom = generateRandomArray(1000000);
+        printSortTime(milyonrandom,"mergeSort", "Random");
+        printSortTime(milyonrandom,"quickSort", "Random");
         Arrays.sort(milyonrandom);
+        printSortTime(milyonrandom,"mergeSort", "Sıralı");
+        printSortTime(milyonrandom,"quickSort", "Sıralı");
         int[] milyonreverse = reverseSort(milyonrandom);
+        printSortTime(milyonreverse,"mergeSort", "Tersten");
+        printSortTime(milyonreverse,"quickSort", "Tersten");
 
 
     }
@@ -165,11 +197,6 @@ public class Main {
         arr[storeIndex] = temp;
         return storeIndex;
     }
-
-
-
-
-
 
 }
 

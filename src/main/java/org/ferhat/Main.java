@@ -10,180 +10,107 @@ public class Main {
 
         System.out.println("************ Bin Başlangıç ************");
         int[] binrandom = generateRandomArray(1000);
-        printSortTime(binrandom,"mergeSort", "Random");
-        printSortTime(binrandom,"quickSort", "Random");
-        printSortTime(binrandom,"heapSort","Random");
-        printSortTime(binrandom,"selectionSort","Random");
-        printSortTime(binrandom,"bubbleSort","Random");
-        printSortTime(binrandom,"insertionSort","Random");
-        printSortTime(binrandom,"shellSort","Random");
+        for (String s1 : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(binrandom, s1, "Random");
+        }
         System.out.println("\n");
         Arrays.sort(binrandom);
-        printSortTime(binrandom,"mergeSort", "Sıralı");
-        printSortTime(binrandom,"quickSort", "Sıralı");
-        printSortTime(binrandom,"heapSort","Sıralı");
-        printSortTime(binrandom,"selectionSort","Sıralı");
-        printSortTime(binrandom,"bubbleSort","Sıralı");
-        printSortTime(binrandom,"insertionSort","Sıralı");
-        printSortTime(binrandom,"shellSort","Sıralı");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(binrandom, s, "Sıralı");
+        }
         System.out.println("\n");
         int[] binReverse = reverseSort(binrandom);
-        printSortTime(binReverse,"mergeSort", "Tersten");
-        printSortTime(binReverse,"quickSort", "Tersten");
-        printSortTime(binReverse,"heapSort","Tersten");
-        printSortTime(binReverse,"selectionSort","Tersten");
-        printSortTime(binReverse,"bubbleSort","Tersten");
-        printSortTime(binReverse,"insertionSort","Tersten");
-        printSortTime(binReverse,"shellSort","Tersten");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(binReverse, s, "Tersten");
+        }
         System.out.println("\n");
         System.out.println("************ On Bin Başlangıç ************");
         int[] onbinrandom = generateRandomArray(10000);
-        printSortTime(onbinrandom,"mergeSort","Random");
-        printSortTime(onbinrandom,"quickSort", "Random");
-        printSortTime(onbinrandom,"heapSort","Random");
-        printSortTime(onbinrandom,"selectionSort","Random");
-        printSortTime(onbinrandom,"bubbleSort","Random");
-        printSortTime(onbinrandom,"insertionSort","Random");
-        printSortTime(onbinrandom,"shellSort","Random");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(onbinrandom, s,"Random");
+        }
         System.out.println("\n");
         Arrays.sort(onbinrandom);
-        printSortTime(onbinrandom,"mergeSort", "Sıralı");
-        printSortTime(onbinrandom,"quickSort", "Sıralı");
-        printSortTime(onbinrandom,"heapSort","Sıralı");
-        printSortTime(onbinrandom,"selectionSort","Sıralı");
-        printSortTime(onbinrandom,"bubbleSort","Sıralı");
-        printSortTime(onbinrandom,"insertionSort","Sıralı");
-        printSortTime(onbinrandom,"shellSort","Sıralı");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(onbinrandom, s, "Sıralı");
+        }
 
         System.out.println("\n");
         int[] onbinreverse = reverseSort(onbinrandom);
-        printSortTime(onbinreverse,"mergeSort", "Tersten");
-        printSortTime(onbinreverse,"quickSort", "Tersten");
-        printSortTime(onbinreverse,"heapSort","Tersten");
-        printSortTime(onbinreverse,"selectionSort","Tersten");
-        printSortTime(onbinreverse,"bubbleSort","Tersten");
-        printSortTime(onbinreverse,"insertionSort","Tersten");
-        printSortTime(onbinreverse,"shellSort","Tersten");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(onbinreverse, s, "Tersten");
+        }
 
         System.out.println("\n");
         System.out.println("************ Elli Bin Başlangıç ************");
         int[] ellibinrandom = generateRandomArray(50000);
-        printSortTime(ellibinrandom,"mergeSort", "Random");
-        printSortTime(ellibinrandom,"quickSort", "Random");
-        printSortTime(ellibinrandom,"heapSort","Random");
-        printSortTime(ellibinrandom,"selectionSort","Random");
-        printSortTime(ellibinrandom,"bubbleSort","Random");
-        printSortTime(ellibinrandom,"insertionSort","Random");
-        printSortTime(ellibinrandom,"shellSort","Random");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(ellibinrandom, s, "Random");
+        }
         Arrays.sort(ellibinrandom);
         System.out.println("\n");
-        printSortTime(ellibinrandom,"mergeSort", "Sıralı");
-        printSortTime(ellibinrandom,"quickSort", "Sıralı");
-        printSortTime(ellibinrandom,"heapSort","Sıralı");
-        printSortTime(ellibinrandom,"selectionSort","Sıralı");
-        printSortTime(ellibinrandom,"bubbleSort","Sıralı");
-        printSortTime(ellibinrandom,"insertionSort","Sıralı");
-        printSortTime(ellibinrandom,"shellSort","Sıralı");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(ellibinrandom, s, "Sıralı");
+        }
         int[] ellibinreverse = reverseSort(ellibinrandom);
         System.out.println("\n");
-        printSortTime(ellibinreverse,"mergeSort", "Tersten");
-        printSortTime(ellibinreverse,"quickSort", "Tersten");
-        printSortTime(ellibinreverse,"heapSort","Tersten");
-        printSortTime(ellibinreverse,"selectionSort","Tersten");
-        printSortTime(ellibinreverse,"bubbleSort","Tersten");
-        printSortTime(ellibinreverse,"insertionSort","Tersten");
-        printSortTime(ellibinreverse,"shellSort","Tersten");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(ellibinreverse, s, "Tersten");
+        }
         System.out.println("\n");
 
         System.out.println("************ Yüz Bin Başlangıç ************");
         int[] yuzbinrandom = generateRandomArray(100000);
-        printSortTime(yuzbinrandom,"mergeSort", "Random");
-        printSortTime(yuzbinrandom,"quickSort", "Random");
-        printSortTime(yuzbinrandom,"heapSort","Random");
-        printSortTime(yuzbinrandom,"selectionSort","Random");
-        printSortTime(yuzbinrandom,"bubbleSort","Random");
-        printSortTime(yuzbinrandom,"insertionSort","Random");
-        printSortTime(yuzbinrandom,"shellSort","Random");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(yuzbinrandom, s, "Random");
+        }
 
         System.out.println("\n");
         Arrays.sort(yuzbinrandom);
-        printSortTime(yuzbinrandom,"mergeSort", "Sıralı");
-        printSortTime(yuzbinrandom,"quickSort", "Sıralı");
-        printSortTime(yuzbinrandom,"heapSort","Sıralı");
-        printSortTime(yuzbinrandom,"selectionSort","Sıralı");
-        printSortTime(yuzbinrandom,"bubbleSort","Sıralı");
-        printSortTime(yuzbinrandom,"insertionSort","Sıralı");
-        printSortTime(yuzbinrandom,"shellSort","Sıralı");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(yuzbinrandom, s, "Sıralı");
+        }
 
         System.out.println("\n");
         int[] yuzbinreverse = reverseSort(yuzbinrandom);
-        printSortTime(yuzbinreverse,"mergeSort", "Tersten");
-        printSortTime(yuzbinreverse,"quickSort", "Tersten");
-        printSortTime(yuzbinreverse,"heapSort","Tersten");
-        printSortTime(yuzbinreverse,"selectionSort","Tersten");
-        printSortTime(yuzbinreverse,"bubbleSort","Tersten");
-        printSortTime(yuzbinreverse,"insertionSort","Tersten");
-        printSortTime(yuzbinreverse,"shellSort","Tersten");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(yuzbinreverse, s, "Tersten");
+        }
 
         System.out.println("\n");
 
         System.out.println("************ Bes Yüz Bin Başlangıç ************");
         int[] besyuzbinrandom = generateRandomArray(500000);
-        printSortTime(besyuzbinrandom,"mergeSort", "Random");
-        printSortTime(besyuzbinrandom,"quickSort", "Random");
-        printSortTime(besyuzbinrandom,"heapSort","Random");
-        printSortTime(besyuzbinrandom,"selectionSort","Random");
-        printSortTime(besyuzbinrandom,"bubbleSort","Random");
-        printSortTime(besyuzbinrandom,"insertionSort","Random");
-        printSortTime(besyuzbinrandom,"shellSort","Random");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(besyuzbinrandom, s, "Random");
+        }
         System.out.println("\n");
         Arrays.sort(besyuzbinrandom);
-        printSortTime(besyuzbinrandom,"mergeSort", "Sıralı");
-        printSortTime(besyuzbinrandom,"quickSort", "Sıralı");
-        printSortTime(besyuzbinrandom,"heapSort","Sıralı");
-        printSortTime(besyuzbinrandom,"selectionSort","Sıralı");
-        printSortTime(besyuzbinrandom,"bubbleSort","Sıralı");
-        printSortTime(besyuzbinrandom,"insertionSort","Sıralı");
-        printSortTime(besyuzbinrandom,"shellSort","Sıralı");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(besyuzbinrandom, s, "Sıralı");
+        }
         System.out.println("\n");
         int[] besyuzbinreverse = reverseSort(besyuzbinrandom);
-        printSortTime(besyuzbinreverse,"mergeSort", "Tersten");
-        printSortTime(besyuzbinreverse,"quickSort", "Tersten");
-        printSortTime(besyuzbinreverse,"heapSort","Tersten");
-        printSortTime(besyuzbinreverse,"selectionSort","Tersten");
-        printSortTime(besyuzbinreverse,"bubbleSort","Tersten");
-        printSortTime(besyuzbinreverse,"insertionSort","Tersten");
-        printSortTime(besyuzbinreverse,"shellSort","Tersten");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(besyuzbinreverse, s, "Tersten");
+        }
         System.out.println("\n");
 
         System.out.println("************ Bir Milyon Başlangıç ************");
         int[] milyonrandom = generateRandomArray(1000000);
-        printSortTime(milyonrandom,"mergeSort","Random");
-        printSortTime(milyonrandom,"quickSort", "Random");
-        printSortTime(milyonrandom,"heapSort","Random");
-        printSortTime(milyonrandom,"selectionSort","Random");
-        printSortTime(milyonrandom,"bubbleSort","Random");
-        printSortTime(milyonrandom,"insertionSort","Random");
-        printSortTime(milyonrandom,"shellSort","Random");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(milyonrandom, s,"Random");
+        }
         System.out.println("\n");
         Arrays.sort(milyonrandom);
-        printSortTime(milyonrandom,"mergeSort", "Sıralı");
-        printSortTime(milyonrandom,"quickSort", "Sıralı");
-        printSortTime(milyonrandom,"heapSort","Sıralı");
-        printSortTime(milyonrandom,"selectionSort","Sıralı");
-        printSortTime(milyonrandom,"bubbleSort","Sıralı");
-        printSortTime(milyonrandom,"insertionSort","Sıralı");
-        printSortTime(milyonrandom,"shellSort","Sıralı");
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(milyonrandom, s, "Sıralı");
+        }
         System.out.println("\n");
         int[] milyonreverse = reverseSort(milyonrandom);
-        printSortTime(milyonreverse,"mergeSort", "Tersten");
-        printSortTime(milyonreverse,"quickSort", "Tersten");
-        printSortTime(milyonreverse,"heapSort","Tersten");
-        printSortTime(milyonreverse,"selectionSort","Tersten");
-        printSortTime(milyonreverse,"bubbleSort","Tersten");
-        printSortTime(milyonreverse,"insertionSort","Tersten");
-        printSortTime(milyonreverse,"shellSort","Tersten");
-
+        for (String s : Arrays.asList("mergeSort", "quickSort", "heapSort", "selectionSort", "bubbleSort", "insertionSort", "shellSort")) {
+            printSortTime(milyonreverse, s, "Tersten");
+        }
 
 
     }
@@ -447,10 +374,4 @@ public class Main {
             }
         }
     }
-
-
-
-
-
 }
-
